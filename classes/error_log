@@ -1,0 +1,2 @@
+[01-Mar-2017 16:44:17 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/webfogpe/public_html/login/database/db_conection.php on line 9
+[01-Mar-2017 16:44:17 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/webfogpe/public_html/login/database/db_conection.php on line 11

@@ -1,0 +1,858 @@
+/* ======================================================================================== *
+ *  Web Folders Online                                                                      *
+ *  --------------------------------------------------------------------------------------  *
+ *  Filename        wf-style-2.css                                                          *
+ *  Version         1.2                                                                     *
+ *  Created         19 Jul 2017                                                             *
+ *  Author          Reinhardt Zündorf                                                       *
+ * ---------------------------------------------------------------------------------------- */
+
+/* ======================================================================================== *
+ *  Colour Scheme                                                                           *
+ * ---------------------------------------------------------------------------------------- *
+ *   Hex         Description              Deuteranopia  Tritanopia      Notes               *
+ * ........................................................................................ *
+ *    #73a8c3     Blue                                                   Shade              *
+ *    #4684a3     Dark moderate blue                                   > Base colour        *
+ *    #2f596d     Dark blue                                              Shade              *
+ * ........................................................................................ *
+ *    #c99a82     Desaturated orange                                     Shade              *
+ *    #a36546     Dark moderate orange                                 > Accent colour      *
+ *    #5e3a29     Very dark orange                                       Shade              *
+ * ........................................................................................ *
+ *    #ffffff     White                                                > Neutral            *
+ *    #d3d3d3     Light grey                                           > Neutral            *
+ *    #666666     Dark grey                                            > Neutral            *
+ * ---------------------------------------------------------------------------------------- */
+
+/* ======================================================================================== *
+ *  General                                                                                 *
+ * ---------------------------------------------------------------------------------------- */
+body 
+{
+    font-family:                Questrial, sans-serif;
+    overflow-x:                 hidden;
+}
+
+/* ======================================================================================== *
+ *  Paragraph, Links & Headings                                                             *
+ * ---------------------------------------------------------------------------------------- */
+p 
+{
+    font-size:                      20px;
+}
+
+p.small
+{
+    font-size:                      16px;
+}
+
+a, a:hover, a:focus, a:active, a.active 
+{
+    color:                          #a36546;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+    font-family:                    Questrial, sans-serif;
+    text-transform:                 capitalize;
+    font-weight:                    700;
+}
+
+h1 
+{
+
+}
+
+h1.small 
+{  
+
+}
+
+/* ======================================================================================== *
+ * Horizontal Rules                                                                         *
+ * ---------------------------------------------------------------------------------------- */
+hr.primary
+{ 
+    border:                         0; 
+    height:                         1px; 
+    background-image:               -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image:               -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image:               -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image:               -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+hr.star-light,
+hr.star-primary 
+{
+    padding:                        0;
+    border:                         none;
+    border-top:                     solid 5px;
+    text-align:                     center;
+    max-width:                      250px;
+    margin:                         25px auto 30px;
+}
+
+hr.star-light:after,
+hr.star-primary:after 
+{
+    content:                        "\f005";
+    font-family:                    FontAwesome;
+    display:                        inline-block;
+    position:                       relative;
+    top:                            -0.8em;
+    font-size:                      2em;
+    padding:                        0 0.25em;
+}
+
+hr.star-light 
+{
+    border-color:                   white;
+}
+
+hr.star-light:after 
+{
+    background-color:               #a36546;
+    color:                          white;
+}
+
+hr.star-primary 
+{
+    border-color:                   #2C3E50;
+}
+
+hr.star-primary:after 
+{
+    background-color:               #ffffff;
+    color:                          #2C3E50;
+}
+
+.img-centered 
+{
+    margin:                         0 auto;
+}
+
+/* ======================================================================================== *
+ * Navbar Top                                                                               *
+ * ---------------------------------------------------------------------------------------- */
+.navbar-top 
+{
+    background-color:               #4684a3;
+    color:                          #ffffff;
+    height:                         50px;
+}
+
+.navbar-top ul li
+{
+    padding:                        7px;
+    padding-top:                    12px;
+    min-height:                     inherit;
+}
+
+.navbar-top ul li a 
+{
+    color:                          inherit;
+    font-family:                    Questrial, sans-serif;
+    font-size:                      1.2em;
+    font-weight:                    500;
+    text-decoration:                none;
+    margin-left:                    8px;
+    margin-right:                   8px;    
+}
+
+.navbar-top ul li a:first-of-type
+{
+    margin-right:                   0px;
+}
+
+.navbar-top ul li:last-child
+{
+    margin-right:                   25px;
+}
+
+.navbar-top ul li a:hover
+{
+    color:                          inherit;
+    text-decoration:                underline;
+    font-weight:                    500;
+}
+
+/* ========================================================================= *
+ * Header (Landing)                                                          *
+ * ------------------------------------------------------------------------- */
+header#landing
+{
+    /*background-color:           #4684a3;   base colour */
+    background-color:           #ffffff;
+    padding-top:                25px;
+    padding-bottom:             20px;
+}
+
+header#landing img                  /* this will be the Web Folders logo */
+{
+    display:                    block;
+    margin-top:                 25px;
+    /*margin:                     0 auto 20px;*/
+}
+
+header#landing .heading h1
+{
+    color:                      #4684a3;        /* base colour */
+    font-size:                  2.0em;
+    font-weight:                700;
+    text-transform:             capitalize;
+}
+
+header#landing .heading h1 small
+{
+    color:                      #3d738f;        /* slightly lighter than base */
+    font-size:                  1.8em;
+    font-weight:                500;
+    text-transform:             inherit;
+}
+
+header#landing .heading h2
+{
+    font-size:                  1.4em;
+    font-weight:                400;
+    color:                      #000000;
+}
+
+@media (min-width: 768px) 
+{
+    header#landing 
+    {
+        padding-top:            0px;
+        padding-bottom:         100px;
+    }
+
+    header#landing .heading h1
+    {
+        font-size:              2.75em;
+    }
+
+    header#landing .heading h1 small
+    {
+        font-size:              2.45em;
+    }
+
+    header#landing .heading h2
+    {
+        font-size:              2.0em;
+    }
+}
+
+/* ========================================================================== *
+ * Portfolio                                                                  *
+ * -------------------------------------------------------------------------- */
+#portfolio .portfolio-item 
+{
+    margin:                         0;
+    right:                          0;
+}
+
+#portfolio .portfolio-item .portfolio-link 
+{
+    display:                        block;
+    position:                       relative;
+    max-width:                      400px;
+    margin:                         0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption 
+{
+    background-color:               #2f596d;
+    position:                       absolute;
+    width:                          100%;
+    height:                         100%;
+    opacity:                        0;
+    transition:                     all ease 0.5s;
+    -webkit-transition:             all ease 0.5s;
+    -moz-transition:                all ease 0.5s;
+}
+#portfolio .portfolio-item .portfolio-link .caption:hover 
+{
+    opacity:                        0.75;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content 
+{
+    position:                       absolute;
+    width:                          100%;
+    height:                         20px;
+    font-size:                      20px;
+    text-align:                     center;
+    top:                            50%;
+    margin-top:                     -12px;
+    color:                          white;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content i 
+{
+    margin-top:                     -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
+#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 
+{
+    margin:                         0;
+}
+
+#portfolio * 
+{
+    z-index:                        2;
+}
+
+@media (min-width: 767px)           
+{
+    #portfolio .portfolio-item  
+    {
+        /*        margin:                     0 0 30px;*/
+        margin:                     0;
+    }
+}
+
+/* ======================================================================= *
+ * Contact Form                                                            *
+ * ----------------------------------------------------------------------- */
+.form-contact
+{
+    color:                          #4684a3;
+}
+
+/* ======================================================================= *
+ * Floating Labels                                                         *
+ * ----------------------------------------------------------------------- */
+.floating-label-form-group 
+{
+    position:                       relative;
+    margin-bottom:                  0;
+    padding-bottom:                 0.5em;
+    border-bottom:                  1px solid #eeeeee;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea 
+{
+    z-index:                        1;
+    position:                       relative;
+    padding-right:                  0;
+    padding-left:                   0;
+    border:                         none;
+    border-radius:                  0;
+    font-size:                      1.5em;
+    background:                     none;
+    box-shadow:                     none !important;
+    resize:                         none;
+}
+
+.floating-label-form-group label 
+{
+    display:                        block;
+    z-index:                        0;
+    position:                       relative;
+    top:                            2em;
+    margin:                         0;
+    font-size:                      0.85em;
+    line-height:                    1.764705882em;
+    vertical-align:                 middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top 0.3s ease,opacity 0.3s ease;
+    -moz-transition: top 0.3s ease,opacity 0.3s ease;
+    -ms-transition: top 0.3s ease,opacity 0.3s ease;
+    transition: top 0.3s ease,opacity 0.3s ease;
+}
+
+.floating-label-form-group:not(:first-child) 
+{
+    padding-left: 14px;
+    border-left: 1px solid #eeeeee;
+}
+
+.floating-label-form-group-with-value label 
+{
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label 
+{
+    color: #4684a3;
+}
+
+form .row:first-child .floating-label-form-group 
+{
+    border-top: 1px solid #eeeeee;
+}
+
+/* ======================================================================= *
+ * Buttons                                                                 *
+ * ----------------------------------------------------------------------- */
+.btn-outline 
+{
+    color:                          white;
+    font-size:                          20px;
+    border: solid 2px white;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active 
+{
+    color:                              #a36546;
+    background:                         #ffffff;
+    border:                             solid 2px white;
+}
+
+.btn-primary 
+{
+    color:                              #ffffff;
+    background-color:                   #2C3E50;
+    border-color:                       #2C3E50;
+    font-weight:                        700;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary 
+{
+    color:                              #ffffff;
+    background-color:                   #1a242f;
+    border-color:                       #161f29;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary 
+{
+    background-image:                   none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active 
+{
+    background-color:               #2C3E50;
+    border-color:                   #2C3E50;
+}
+
+.btn-primary .badge 
+{
+    color:                          #2C3E50;
+    background-color:               #ffffff;
+}
+
+.btn-success 
+{
+    color: white;
+    background-color: #a36546;
+    border-color: #a36546;
+    font-weight: 700;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success 
+{
+    color: white;
+    background-color: #128f76;
+    border-color: #11866f;
+}
+
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success 
+{
+    background-image: none;
+}
+
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active 
+{
+    background-color: #a36546;
+    border-color: #a36546;
+}
+
+.btn-success .badge 
+{
+    color:                      #a36546;
+    background-color:           white;
+}
+
+.btn-social 
+{
+    display:                    inline-block;
+    height:                     50px;
+    width:                      50px;
+    border:                     2px solid white;
+    border-radius:              100%;
+    text-align:                 center;
+    font-size:                  20px;
+    line-height:                45px;
+}
+
+/* ========================================================================= *
+ * About                                                                     *
+ * ------------------------------------------------------------------------- */
+#about 
+{
+    background-color:       #ededed;
+    color:                  #686868;
+    font-size:              24px;
+    padding-top:            0px;
+    padding-right:          0px;
+}
+
+#about h1
+{
+    color:                  #114b6a;
+    font-weight:            bold;
+}
+
+#about h2
+{
+    color:                      #000000;
+    font-weight:                normal;
+}
+
+#about img 
+{
+    background:                 #168ccc;
+    margin-right:               0px;
+    padding-right:              0px;
+    right:                      0px;
+    /*width:                  100%;*/ 
+    /*height:                 100%;*/
+}
+
+/* ========================================================================= *
+ * Services                                                                  *
+ * ------------------------------------------------------------------------- */
+.mosaic-service-icon 
+{
+    border-radius:              4px;
+    color:                      #fff;
+    display:                    inline-block;
+    font-size:                  36px;
+    height:                     90px;
+    line-height:                90px;
+    width:                      90px;  
+    -webkit-transition:         background-color 0.2s ease;
+    transition:                 background-color 0.2s ease;
+}
+
+.mosaic-services .col-sm-4:hover .service-icon 
+{
+    background-color:           #333;
+}
+
+.mosaic-services .col-sm-4 
+{    
+    border-right:               1px solid #f2f2f2;
+    border-bottom:              1px solid #f2f2f2;
+    padding-bottom:             10px;
+}
+
+.mosaic-services .col-sm-4:nth-child(4), 
+.mosaic-services .col-sm-4:nth-child(5), 
+.mosaic-services .col-sm-4:nth-child(6) 
+{
+    border-bottom:              0;
+    padding-top:                60px;
+}
+
+.mosaic-services .col-sm-4:nth-child(3), 
+.mosaic-services .col-sm-4:nth-child(6) 
+{
+    border-right:               0;
+}
+
+.service-info h3 
+{
+    margin-top:                 35px;
+}
+
+/* ========================================================================= *
+ * Footer                                                                    *
+ * ------------------------------------------------------------------------- */
+footer 
+{
+    color:                      #ffffff;
+}
+
+footer i
+{
+    margin-right:                15px;
+}
+
+footer h1 
+{
+    color:                      #ffffff;
+    font-family:                Questrial, sans-serif;
+    font-size:                  1.2em;
+    font-weight:                700;
+    text-transform:             capitalize;
+    text-decoration:            underline;
+    margin-bottom:              10px;
+}
+
+footer h2 
+{
+    color:                      #ffffff;
+    font-family:                Questrial, sans-serif;
+    font-size:                  1.125em;
+    font-weight:                500;
+    text-transform:             capitalize;
+    margin-bottom:              5px;
+}
+
+footer .footer-entry 
+{
+    margin:                     15px;
+}
+
+footer .footer-col
+{
+    margin-bottom:              25px;
+}
+
+footer .footer-above 
+{
+    background-color:           #4684a3;
+    /*padding-top:                350px;*/
+}
+
+footer .footer-below 
+{
+    background-color:           #2f596d;
+    padding:                    10px 0;
+}
+
+
+/* ========================================================================= *
+ * Media Queries                                                             *
+ * ------------------------------------------------------------------------- */
+@media (max-width: 767px)                       /* Extra small devices */
+{
+    .navbar-toggle 
+    {
+        border:                 1px solid #454547;
+    }
+
+    .navbar-toggle .icon-bar 
+    {
+        background-color:       #454547;
+    }
+
+    .mosaic-services .col-sm-4
+    {
+        padding-top:            0 !important;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) /* Small devices */
+{
+    .mosaic-services .col-sm-4
+    {
+        height:                 265px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) /* Medium devices */
+{
+    .mosaic-services .col-sm-4
+    {
+        height:                200px !important;
+    }
+}
+
+@media (min-width: 1200px)                        /* Large devices */
+{
+    .mosaic-services .col-sm-4
+    {
+        height:                265px !important;
+    }
+}
+
+/* ========================================================================= *
+ * Login Form                                                                *
+ * ------------------------------------------------------------------------- */
+body.login
+{
+    height:                         100%;
+    background-repeat:              no-repeat;
+    background-color:               #d3d3d3;
+}
+
+.card-container.card 
+{
+    max-width:                      350px;
+    padding:                        40px 40px;
+}
+
+.btn 
+{
+    font-weight:                    700;
+    height:                         36px;
+    -moz-user-select:               none;
+    -webkit-user-select:            none;
+    user-select:                    none;
+    cursor:                         default;
+}
+
+/* ========================================================================= *
+ * Login Card                                                                *
+ * ------------------------------------------------------------------------- */
+.card 
+{
+    background-color:               #F7F7F7;
+    padding:                        20px 25px 30px;     /* no content */
+    margin:                         0 auto 25px;
+    margin-top:                     50px;
+    -moz-border-radius:             2px;                /* shadows and rounded borders */
+    -webkit-border-radius:          2px;
+    border-radius:                  2px;
+    -moz-box-shadow:                0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow:             0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:                     0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card 
+{
+    width:                          96px;
+    height:                         96px;
+    margin:                         0 auto 10px;
+    display:                        block;
+    -moz-border-radius:             50%;
+    -webkit-border-radius:          50%;
+    border-radius:                  50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card 
+{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword 
+{
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button 
+{
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus 
+{
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.login.btn.btn-signin:active,
+.login.btn.btn-signin:focus 
+{
+    background-color:           #2f596d;
+}
+
+.forgot-password 
+{
+    color:                      #4684a3
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus
+{
+    color:                      #2f596d;
+}

@@ -1,0 +1,93 @@
+ 
+ Changes & Updates
+ EduBoard: Chipa-Tabane 
+=============================================
+
+----------------------------------------------------------------------------------------
+  06/04/2017
+----------------------------------------------------------------------------------------
+
+	1. Changed policy table in ctc_admin to have DateAdded & DateRemoved fields.
+		- Updated db.sql.
+		- listPolicies.php now runs SELECT and checks whether DateRemoved is NULL.
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+  03/04/2017
+----------------------------------------------------------------------------------------
+
+	1. Added navPanel.php to /modules/layout for navigation to main sections:
+		- Dashboard (or Home)
+		- Content
+		- Calendar
+		- Profile
+		- Support
+
+		The navPanel also displays the user's name, surname and profile picture.
+
+	2. Added stylesheet navPanel.css to /lib/css for navPanel's CSS.
+
+	3. Added a 'mLastLogin' field to the 'member' table of the 'ctc_admin' database.
+		This field is updated everytime the user logs in to EduBoard.
+
+	4. Standardized log lines in the Member class:
+		error_log("EduBoard: [class] (lineNumber) - Error, info, fail or alert message discription. (class->function)", LOG_TYPE, "/www/dev/log/eduLog.log");
+
+
+----------------------------------------------------------------------------------------
+  30/03/2017
+----------------------------------------------------------------------------------------
+
+	- Added file uploader class (classes/FileUploader.php)
+	- Added uploadPolicy.php form.
+	- Made changes to the Login Form as well as the Member class.
+	- Removed (temporarily) the Hashing functionality from Member->login().
+	- Started the Dashboard view for logged in members.
+
+ --------------------------------------------------------------------------------------
+
+   14/03/2017
+ ---------------------------------------------------------------------------------------
+
+	1.  Rewrote 'index.php' & added comments for each section as well as comment dividers.
+
+	2.  Rewrote 'conf.php' to reflect the new DB and structural changes that were made to 
+		the entire CMS.
+
+	3.	New directory structure:
+	
+			Root
+		------------
+		  /vp/								'project root'
+
+		  	Folder Categories
+		  ---------------------
+		     ./archive		    			'old files (eventually to be deleted)'
+		     ./classes		    			'classes for as per the DB tables'
+		     ./conf		    				'configuration & setup files'
+		     ./modules		    			'lists, views, edit, delete & other functions'
+
+		     	Modules 
+		     -------------
+		             ../admin 				''
+		             ../applicant 		    ''      
+		             ../dashboard 			''
+		             ../db  				''
+		             ../helpers 			''
+		             ../layout 				''
+		             ../list 				''	
+		             ../login 				''
+		             ../mailer  			''
+		             ../profile  			''
+		             ../view   				''
+		             ../volunteer    		''	
+
+	      Components (cont.)
+	    ----------------------
+		  ./../res								'graphics, images, JS & CSS files'
+
+    4.	Create 'changeLog.txt'
+
+
+

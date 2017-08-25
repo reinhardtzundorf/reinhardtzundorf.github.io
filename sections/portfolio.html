@@ -1,0 +1,104 @@
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio">
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Aqua Skills -->
+            <div class="col-lg-3 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                        <p>Aqua Skills Swim School</p>
+                    </div>
+                    <img class="img-responsive" src="res/portfolio/portfolio-aqs-lg.png"  alt="Aqua Skill Swim School"/>
+                </a><!-- /#portfolioModal1 -->
+            </div><!-- /.col-lg-3 .portfolio-item -->
+
+            <!-- Sewing Studio -->
+            <div class="col-lg-3 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                        <p>Sewing Studio</p>
+                    </div>
+                    <img class="img-responsive" src="res/portfolio/portfolio-sewing-lg.png" alt="Sewing Studio">
+                </a><!-- /#portfolioModal1 -->
+            </div><!-- /.col-lg-3 .portfolio-item -->
+
+            <!-- PORTFOLIO-ITEM: Chipa-Tabane -->
+            <div class="col-lg-3 portfolio-item">
+                <a href="#modal3" class="portfolio-link" data-toggle="modal" data-target="#portfolioModal3" onclick="$('#modal3').modal({ show: true})">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                        <p>Chipa-Tabane High School</p>
+                    </div>
+                    <img class="img-responsive" src="res/portfolio/portfolio-chipa-lg.png" alt="Chipa-Tabane Comprehensive High School"/>
+                </a><!-- /#portfolioModal1 -->
+            </div><!-- /.col-lg-3 .portfolio-item -->
+
+            <!-- MODAL: Chipa-Tabane #3 -->
+            <div class="modal fade" id="#modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="form-control-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="form-control-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Online Resumé (U/C) -->
+            <div class="col-lg-3 portfolio-item">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                        <p>Online Resumé</p>
+                    </div>
+                    <img class="img-responsive"  src="res/portfolio/portfolio-resume-lg.png" alt="Online Resumé"/>
+                </a><!-- /#portfolioModal1 -->
+            </div><!-- /.col-lg-3 .portfolio-item -->
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO: Modal JS Event -->
+<script>
+    $('#modal3').on('show.bs.modal', function (event) 
+    {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var r3ecipient = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body input').val(recipient)
+//    })
+</script>
+<!-- ============================================  -->
